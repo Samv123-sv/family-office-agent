@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color palette */
+  --color-navy: #0B1426;
+  --color-surface: #0F1929;
+  --color-line: #1E2D45;
+  --color-muted: #8899AA;
+  --color-amber: #F59E0B;
+  --color-amber-dim: #B45309;
+
+  /* Typography */
+  --font-sans: var(--font-ibm-plex-sans), system-ui, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), 'Courier New', monospace;
+  --font-serif: var(--font-ibm-plex-serif), Georgia, serif;
+
+  /* No rounded corners */
+  --radius: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-full: 9999px;
+}
+
+html,
+body {
+  background-color: #0B1426;
+  color: #ffffff;
+  font-family: var(--font-sans);
+}
+
+/* Range input styling */
+input[type='range'] {
+  appearance: none;
+  height: 2px;
+  background: #1E2D45;
+  outline: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #F59E0B;
+  cursor: pointer;
+}
+input[type='range']::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #F59E0B;
+  border: none;
+  cursor: pointer;
+}
