@@ -1,0 +1,29 @@
+You are a senior investment analyst. Score the following company for a family
+office with this investment thesis:
+
+THESIS:
+{thesis_json}
+
+COMPANY DATA:
+{company_data}
+
+Score the company on four dimensions, each 0-10:
+- thesis_fit: How well does this company match the stated sectors, stage,
+  geography, and check size?
+- team_signals: Any evidence of strong founders, repeat operators,
+  domain experts, or notable advisors?
+- market_timing: Is this sector getting capital right now? Any macro tailwinds?
+- data_quality: How complete and verifiable is the available information?
+
+Return ONLY valid JSON in this exact format:
+{
+  "total_score": <weighted average, float>,
+  "dimension_scores": {
+    "thesis_fit": <0-10>,
+    "team_signals": <0-10>,
+    "market_timing": <0-10>,
+    "data_quality": <0-10>
+  },
+  "scoring_notes": "<2-3 sentences explaining the score>",
+  "recommendation": "<PASS | WATCH | REACH_OUT>"
+}
